@@ -33,6 +33,7 @@ public sealed partial class GasVolumePumpComponent : Component
     public float LowerThreshold = 0.01f;
 
     [DataField]
+    [GuidebookData]
     public float HigherThreshold = DefaultHigherThreshold;
 
     public static readonly float DefaultHigherThreshold = 2 * Atmospherics.MaxOutputPressure;

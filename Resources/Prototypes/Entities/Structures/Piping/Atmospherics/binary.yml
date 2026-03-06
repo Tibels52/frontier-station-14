@@ -135,6 +135,7 @@
     - type: PipeColorVisuals
     - type: GasVolumePump
       enabled: false
+      higherThreshold: 9000
     - type: ActivatableUI
       key: enum.GasVolumePumpUiKey.Key
     - type: ActivatableUIRequiresAnchor
