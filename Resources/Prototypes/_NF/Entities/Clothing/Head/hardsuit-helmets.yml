@@ -89,9 +89,6 @@
     sprite: _NF/Clothing/Head/Hardsuits/maxim_prototype.rsi
   - type: Clothing
     sprite: _NF/Clothing/Head/Hardsuits/maxim_prototype.rsi
-  - type: PointLight # Luxury Hardsuit Light
-    radius: 7
-    energy: 3
 
 #Security patrol suit
 - type: entity
@@ -249,10 +246,6 @@
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.8
-  - type: PointLight
-    radius: 7
-    energy: 2
-    #color: "#d6adff"
 
 #Tactical hardsuit Helmet
 - type: entity
@@ -301,6 +294,28 @@
         Piercing: 0.9
         Heat: 0.9
 
+#Rogue suit
+- type: entity
+  parent: NFClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHardsuitRogue
+  categories: [ HideSpawnMenu ]
+  name: Rogue combat suit helmet
+  description: Little space won't keep a tricorn out of style
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Head/Hardsuits/rogue.rsi
+  - type: Clothing
+    sprite: _NF/Clothing/Head/Hardsuits/rogue.rsi
+  - type: PointLight
+    color: "#ffeead"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+
 #Wizard Hardsuit
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
@@ -326,7 +341,7 @@
         Piercing: 0.8
         Heat: 0.8
 
-#Hostile enviroment hardsuit
+#Hostile environment hardsuit
 - type: entity
   parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHardsuitHostileEnvironment
@@ -340,8 +355,6 @@
     sprite: _NF/Clothing/Head/Hardsuits/hostile_environment.rsi
   - type: PointLight
     enabled: true
-    radius: 3.5
-    energy: 5
     color: "#ffeead"
     soft: true
     castShadows: false

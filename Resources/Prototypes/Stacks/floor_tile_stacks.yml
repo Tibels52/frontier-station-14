@@ -634,6 +634,7 @@
   name: stack-asteroid-astro-sand-floor
   spawn: FloorTileItemAstroAsteroidSand
   maxCount: 30
+  icon: { sprite: Objects/Tiles/tile.rsi, state: astro-asteroid } # Frontier: added sprite here for the asteroid wall crafting recipes
 
 - type: stack
   id: FloorTileWoodLarge
@@ -663,6 +664,12 @@
   id: FloorTileXenoMaint
   name: stack-xeno-maint
   spawn: FloorTileItemXenoSteelCorner
+  maxCount: 30
+
+- type: stack
+  id: FloorTileXenoborg
+  name: stack-xenoborg
+  spawn: FloorTileItemXenoborg
   maxCount: 30
 
 - type: stack

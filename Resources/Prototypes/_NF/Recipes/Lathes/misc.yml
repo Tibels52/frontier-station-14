@@ -247,11 +247,31 @@
     Uranium: 250
 
 - type: latheRecipe
+  id: MailTrolleyFlatpack
+  result: MailTrolleyFlatpack
+  materials:
+    Steel: 2000
+    Plastic: 1500
+    Plasteel: 1000
+
+- type: latheRecipe
   id: NFClothingShoesBootsMoon
   result: NFClothingShoesBootsMoon
   completetime: 2
   materials:
     Steel: 600
+
+- type: latheRecipe
+  id: NFClothingShoesBootsJetpack
+  result: NFClothingShoesBootsJetpack
+  completetime: 5 
+  materials: 
+    Steel: 1500 
+    Cloth: 1500
+    Glass: 1500 
+    Plastic: 1000 
+    Gold: 300 
+    Silver: 800
 
 - type: latheRecipe
   id: DoubleEmergencyAirTank
@@ -266,6 +286,18 @@
   materials:
     Steel: 400
     Glass: 200
+
+- type: latheRecipe
+  id: Gavel
+  result: Gavel
+  materials:
+    Wood: 200
+
+- type: latheRecipe
+  id: GavelBlock
+  result: GavelBlock
+  materials:
+    Wood: 200
 
 # Toys
 - type: latheRecipe

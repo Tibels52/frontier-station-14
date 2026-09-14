@@ -24,6 +24,7 @@ shipyard-console-deed-label = Registered Ship:
 shipyard-console-appraisal-label = Shuttle Resale Value:{" "}
 shipyard-console-no-voucher-redemptions = All voucher redemptions have been used.
 shipyard-console-invalid-voucher-type = This voucher cannot be used at this console.
+shipyard-console-borg-chip = Cyborg chips cannot be used to purchase a ship.
 
 shipyard-console-contraband-onboard = Smuggled contraband detected onboard.
 shipyard-console-station-resources = Vital station resources detected onboard.
@@ -34,6 +35,7 @@ shipyard-console-fallback-prevent-sale = YML-class bugs detected onboard. Please
 shipyard-console-menu-size-label = Size:{" "}
 shipyard-console-menu-class-label = Class:{" "}
 shipyard-console-menu-engine-label = Engine:{" "}
+shipyard-console-menu-sortby-label = Sort By:{" "}
 
 shipyard-console-purchase-available = Purchase
 shipyard-console-guidebook = Manual
@@ -78,7 +80,11 @@ shipyard-console-engine-Singularity = Singularity
 shipyard-console-engine-Solar = Solar
 shipyard-console-engine-RTG = RTG
 shipyard-console-engine-APU = APU
+shipyard-console-engine-Thermoelectric = Thermoelectric
 shipyard-console-engine-Welding = Welding Fuel
 shipyard-console-engine-Plasma = Plasma
 shipyard-console-engine-Uranium = Uranium
 shipyard-console-engine-Bananium = Bananium
+
+shipyard-console-sortby-Name = Name
+shipyard-console-sortby-Price = Price

@@ -14,6 +14,7 @@
   - BorgModuleTool
   - BorgModuleCable
   - BorgModuleFireExtinguisher
+  - BorgModuleInflatable
 
 - type: latheRecipePack
   id: BorgLimbsStatic
@@ -36,11 +37,16 @@
   id: BorgModules
   recipes:
   - BorgModuleAdvancedCleaning
+  - BorgModuleAdvancedSprayNozzle #Frontier
   - BorgModuleAdvancedTool
+  - BorgModuleAdvancedClowning
   - BorgModuleAdvancedChemical
   - BorgModuleAdvancedMining
   - BorgModuleAdvancedParamedic # Frontier
+  - BorgModulePill # Frontier
   - BorgModuleRCD # Frontier
+  - BorgModuleMutation # Frontier
+  - AdvancedBorgModuleMusique # Frontier
 
 - type: latheRecipePack
   id: MechParts

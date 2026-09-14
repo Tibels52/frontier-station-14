@@ -9,6 +9,10 @@
     snap:
     - Wall
   components:
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Rotatable
   - type: RangedDamageSound
     soundGroups:
       Brute:
@@ -757,6 +761,13 @@
         acts: ["Destruction"]
   - type: RadiationBlocker
     resistance: 5
+    # Frontier
+  - type: Construction
+    graph: Girder
+    node: diagonalReinforcedWall
+  - type: StaticPrice
+    price: 100
+    # End Frontier
 
 # Riveting
 - type: entity
@@ -1090,6 +1101,11 @@
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
+    # Frontier
+  - type: Construction
+    graph: Girder
+    node: diagonalWall
+    # End Frontier
 
 - type: entity
   parent: WallSolid
@@ -1232,6 +1248,33 @@
   - type: Construction
     graph: Girder
     node: reinforcedWallChitin
+
+- type: entity
+  parent: WallPlastitanium
+  id: WallXenoborg
+  name: xenoborg wall
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/xenoborg.rsi
+  - type: Icon
+    sprite: Structures/Walls/xenoborg.rsi
+  - type: IconSmooth
+    key: walls
+    base: xenoborg
+
+- type: entity
+  parent: WallPlastitaniumDiagonal
+  id: WallXenoborgDiagonal
+  name: xenoborg wall
+  suffix: diagonal
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: Structures/Walls/xenoborg_diagonal.rsi
+    state: state0
+  - type: Icon
+    sprite: Structures/Walls/xenoborg_diagonal.rsi
+    state: state0
 
 - type: entity
   parent: BaseWall
@@ -1435,6 +1478,10 @@
     - mining
     - miningB
   - type: Appearance
+  - type: RCDDeconstructable # Frontier
+    cost: 6 # Frontier
+    delay: 8 # Frontier
+    fx: EffectRCDDeconstruct8 # Frontier
 
 - type: entity
   parent: WallDiagonalBase
@@ -1477,7 +1524,9 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: RCDDeconstructable # Frontier
-    deconstructable: false # Frontier
+    cost: 6 # Frontier
+    delay: 8 # Frontier
+    fx: EffectRCDDeconstruct8 # Frontier
 
 
 # Vault Walls
@@ -1599,13 +1648,23 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 250 # Frontier: 100<250
       behaviors:
       - !type:DoActsBehavior
-        acts: [ "Destruction" ]
+        acts: ["Destruction"]
+    - trigger: # Frontier
+        !type:DamageTrigger # Frontier
+        damage: 150 # Frontier
+      behaviors: # Frontier
+      - !type:ChangeConstructionNodeBehavior # Frontier
+        node: girder # Frontier
+      - !type:DoActsBehavior # Frontier
+        acts: ["Destruction"] # Frontier
   - type: IconSmooth
     key: cobblebricks
     base: cobblebrick
+  - type: StaticPrice # Frontier
+    price: 115 # Frontier
 
 - type: entity
   parent: WallCobblebrick
@@ -1646,6 +1705,9 @@
   - type: IconSmooth
     key: cobblebricks
     base: cobblebrick
+  - type: Construction # Frontier
+    graph: Girder # Frontier
+    node: asteroidcobblebrick # Frontier
 
 - type: entity
   parent: WallCobblebrick
@@ -1685,3 +1747,74 @@
   - type: IconSmooth
     key: cobblebricks
     base: cobblebrick
+
+# Cardboard
+
+- type: entity
+  id: Cardwall
+  parent: BaseStructure
+  name: cardboard wall
+  description: Budget cuts are hitting hard.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/pierce.ogg"
+  - type: Tag
+    tags:
+    - Wall
+  - type: Sprite
+    drawdepth: SmallObjects #so bullets pass 'through'
+    sprite: Structures/Walls/card.rsi
+  - type: Icon
+    sprite: Structures/Walls/card.rsi
+    state: full
+  - type: Construction
+    graph: Cardwall
+    node: cardwall
+    deconstructionTarget: start
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Card
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - FlimsyLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80 #excess damage (nuke?). avoid computational cost of spawning entities.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialCardboard:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: cards
+    base: card
+  - type: Occluder
+  - type: BlockWeather
+  - type: SunShadowCast

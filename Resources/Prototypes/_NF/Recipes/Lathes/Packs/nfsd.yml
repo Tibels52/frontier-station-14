@@ -28,6 +28,11 @@
   - NFAmmunitionBoxPistol45
   - NFAmmunitionBoxPistol45Overpressure
   - NFAmmunitionBoxPistol45Rubber
+  - NFMagazineGrenadeEmpty
+  - NFShockNetGrenade
+  - NFGrenadeTearGas
+  - NFGrenadeFlash
+  - NFGrenadeEMP
 
 - type: latheRecipePack
   id: NfsdToolsStatic
@@ -36,6 +41,7 @@
   - ClothingOuterEVASuitPrisoner
   #- ClothingHeadHelmetEVALarge
   - ClothingEyesHudNfsd
+  - ClothingEyesHudNfsdMed
   - NFCombatKnife
   - NFFlash
   - NFForensicPad
@@ -52,6 +58,7 @@
   - NFClothingNeckCardNfsdWrit
   - NFBaseClothingNeckHolsterThighNfsd
   - NFBaseClothingNeckSheathThighNfsd
+  - JetpackNfsd
 
 - type: latheRecipePack
   id: NfsdTargetsStatic
@@ -69,8 +76,10 @@
   - NFWeaponRevolverArgenti
   - NFWeaponPistolMk58
   - NFWeaponShotgunDoubleBarreled
+  - NFWeaponShotgunKammerer
   - NFWeaponRifleAssaultNovaliteC1
   - NFWeaponRifleAssaultGestio
+  - NFWeaponEnergyRifleAssaultLaserRepeater
   - WeaponPistolPollock
   - NFStunbaton
   - NFWeaponEnergyPistolDisabler
@@ -84,6 +93,8 @@
 - type: latheRecipePack
   id: NfsdReportingStatic
   recipes:
-    - CassetteTape
-    - TapeRecorder
-    - ClothingNeckBodyCameraNFSD
+  - CassetteTape
+  - TapeRecorder
+  - ClothingNeckBodyCameraNFSD
+  - Gavel
+  - GavelBlock

@@ -79,6 +79,16 @@
       - id: Multitool
 
 - type: entity
+  id: ClothingBeltKatanaSheathFilled
+  parent: ClothingBeltKatanaSheath
+  suffix: Filled, Katana
+  components:
+  - type: ContainerFill
+    containers:
+      katanaslot:
+      - Katana
+
+- type: entity
   id: ClothingBeltSheathFilledHilt
   parent: ClothingBeltSheath
   suffix: Filled, Hilt
@@ -103,3 +113,8 @@
     - id: Multitool
     - id: GasAnalyzer
     - id: trayScanner
+
+- type: entity
+  parent: [ TrashBagBlue, StorageFillGenericTrashItems ]
+  id: NFTrashBagBlueFilledTrash
+  suffix: Filled, Trash

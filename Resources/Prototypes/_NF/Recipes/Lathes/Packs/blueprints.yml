@@ -33,8 +33,10 @@
   - DawInstrumentMachineCircuitboard
   - MassMediaCircuitboard
   - JukeboxCircuitBoard
+  - SuperHarmonicaInstrument
   # RoboticCleanliness
   - BorgModuleAdvancedCleaning
+  - BorgModuleAdvancedSprayNozzle
   - PortablePumpMachineCircuitBoard
   # IndustrialCutter
   - CutterMachineCircuitboard
@@ -80,6 +82,7 @@
   - PortableGeneratorJrPacmanMachineCircuitboard
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
+  - SolarAssemblyFlatpack
   - EmitterCircuitboard
   - PowerComputerCircuitboard
   # AtmosphericTech
@@ -115,6 +118,7 @@
   - JawsOfLife
   - ClothingBeltChiefEngineer
   - BorgModuleAdvancedTool
+  - NFClothingEyesGlassesMesonScanner
   # PortableFission
   - PortableGeneratorDKJrMachineCircuitboard
   # RapidConstruction
@@ -154,6 +158,7 @@
   # MechanizedTreatment
   - BorgModuleAdvancedChemical
   - BorgModuleAdvancedParamedic
+  - BorgModulePill
   # RoboticCleanliness
   - PortablePumpMachineCircuitBoard
   # AdvancedCleaning
@@ -174,6 +179,8 @@
   # IndustrialMedicine
   - MedicalAssemblerMachineCircuitboard
   - HotplateMachineCircuitboard
+  - ElectrolysisUnitMachineCircuitboard
+  - CentrifugeMachineCircuitboard
   - DefibrillatorCompact
   # SyringeGun
   - LauncherSyringe
@@ -226,6 +233,7 @@
   - JetpackSecurity
   # AdvancedPersonalPropulsion
   - JetpackVoid
+  - NFClothingShoesBootsJetpack
   # HardsuitsExperimentalIndustrial
   - ClothingOuterHardsuitMaximPrototype
 
@@ -240,8 +248,6 @@
   # NFBasicShuttleArmament
   - NFGrenadeFlash
   - NFGrenadeEMP
-  # PersonalPropulsion
-  - JetpackNfsd
 
 # region Salvage
 - type: latheRecipePack
@@ -263,6 +269,7 @@
   - JetpackCaptain
   # AdvancedPersonalPropulsion
   - JetpackVoid
+  - NFClothingShoesBootsJetpack
   # BluespaceGasTanks
   - BluespaceAirTank
   - SmallBluespaceAirTank
@@ -348,6 +355,7 @@
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
   - PlantAnalyzer
+  - BorgModuleMutation
   # AudioVisualCommunication
   - SurveillanceWirelessCameraMovableCircuitboard
   - SurveillanceWirelessCameraAnchoredCircuitboard
@@ -355,8 +363,10 @@
   - ComputerTelevisionCircuitboard
   - SynthesizerInstrument
   - DawInstrumentMachineCircuitboard
+  - AdvancedBorgModuleMusique
   - MassMediaCircuitboard
   - JukeboxCircuitBoard
+  - SuperHarmonicaInstrument
   # RoboticCleanliness
   - BorgModuleAdvancedCleaning
   - PortablePumpMachineCircuitBoard
@@ -393,6 +403,7 @@
   - BoozeDispenserMachineCircuitboard
   - SodaDispenserMachineCircuitboard
   - ImpCoffeeMachineCircuitboard
+  - NFCookingBag
   # MiscellaneousItemsOrganization
   - NFPouchUtility
   - NFPouchEngineering
@@ -417,8 +428,11 @@
   - ServiceSelectiveDropper
   - KitchenAssemblerMachineCircuitboard
   - ElectricRangeMachineCircuitboard
+  - NFServiceDrinkShakerBluespace
   # MobileSanitation
+  # MobileLogisticsAndSanitation
   - JanicartFlatpack
+  - MailTrolleyFlatpack
   # MagnetsTech
   - NFClothingShoesBootsMoon
   # HardsuitsSpecialized
@@ -481,11 +495,17 @@
   - NFMagazineRifle30Empty
   - NFMagazineDrumRifle20Empty
   - MagazineAsmgtUniversalEmpty
-  # BulkRifleAmmo
+  # BulkAmmo
+  - NFAmmunitionBoxBigPistol35
+  - NFAmmunitionBoxBigPistol35Overpressure
+  - NFAmmunitionBoxBigPistol45
+  - NFAmmunitionBoxBigPistol45Overpressure
   - NFAmmunitionBoxBigRifle20
   - NFAmmunitionBoxBigRifle20Overpressure
   - NFAmmunitionBoxBigRifle30
   - NFAmmunitionBoxBigRifle30Overpressure
+  - NFAmmunitionBoxBigShellShotgunBuckshot
+  - NFAmmunitionBoxBigShellShotgunOverpressure
   # NFAdvancedRiotControl
   - NFTelescopicShield
   # NFExplosiveTechnology

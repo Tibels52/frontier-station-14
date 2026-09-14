@@ -50,6 +50,22 @@
   conditions:
     - !type:TileNotBlocked
 
+# Frontier
+- type: construction
+  id: DiagonalWall
+  name: recipes-wall-diagonal-name
+  graph: Girder
+  startNode: start
+  targetNode: diagonalWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+# End Frontier
+
 - type: construction
   id: ReinforcedWall
   graph: Girder
@@ -62,6 +78,22 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+
+# Frontier
+- type: construction
+  id: DiagonalReinforcedWall
+  name: recipes-reinforced-wall-diagonal-name
+  graph: Girder
+  startNode: start
+  targetNode: diagonalReinforcedWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+# End Frontier
 
 - type: construction
   id: WallClock
@@ -206,6 +238,19 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
+
+- type: construction
+  id: Cardwall
+  graph: Cardwall
+  startNode: start
+  targetNode: cardwall
+  category: construction-category-structures
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
 
 - type: construction
   id: Grille
@@ -1192,6 +1237,16 @@
   graph: DoorGraph
   startNode: start
   targetNode: paperDoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  id: CardDoor
+  graph: DoorGraph
+  startNode: start
+  targetNode: cardDoor
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter

@@ -94,6 +94,7 @@
   - DefibrillatorCompact
   - ReinforcedJug
   - BorgModuleAdvancedParamedic
+  - BorgModulePill
   - MedicalPouch
 
 - type: latheRecipePack
@@ -111,3 +112,5 @@
   - ChemMasterMachineCircuitboard
   - ReagentGrinderMachineCircuitboard
   - HotplateMachineCircuitboard
+  - ElectrolysisUnitMachineCircuitboard
+  - CentrifugeMachineCircuitboard
