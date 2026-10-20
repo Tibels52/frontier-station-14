@@ -191,7 +191,7 @@
   parent: [ BaseStructureDynamic, BasePressurePumpGaslock, BaseMachinePowered, ConstructibleMachine ]
   id: GaslockFrame
   name: portable gaslock
-  description: Pumps gas through. Accepts docking, but cannot dock. Both sides must be docked and pumping in the same direction for gas to flow.
+  description: Pumps gas through and transfers power to the low-voltage cable beneath it while docked. Both sides must be docked and pumping in the same direction for gas to flow.
   placement:
     mode: SnapgridCenter
   components:
@@ -236,6 +236,29 @@
     receiveOnly: true
   - type: DeviceNetwork
     prefix: device-address-prefix-portable-gaslock
+  - type: GaslockPowerTransfer
+    maxPowerTransfer: 10000
+  - type: PowerConsumer
+    voltage: Apc
+    node: powerInput
+  - type: PowerSupplier
+    voltage: Apc
+    node: powerOutput
+    supplyRate: 0
+    enabled: false
+  - type: NodeContainer
+    nodes:
+      inlet:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+      outlet:
+        !type:DockablePipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+      powerOutput:
+        !type:CableDeviceNode
+        nodeGroupID: Apc
   - type: Fixtures
     fixtures:
       fix1:
